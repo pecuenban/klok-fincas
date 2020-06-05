@@ -16,10 +16,10 @@ export class ConexionesService {
   getFinca(id){
     return this.http.get('https://us-central1-klok-reservas.cloudfunctions.net/api/finca/'+id, this.httpOptions);
   }
-   postSala(finca){
-    return this.http.post('https://us-central1-klok-reservas.cloudfunctions.net/api/test',finca, this.httpOptions);
+   postFinca(finca){
+    return this.http.post('https://us-central1-klok-reservas.cloudfunctions.net/api/finca',finca, this.httpOptions);
   }
-   putSala(finca){
-    return this.http.put('https://us-central1-klok-reservas.cloudfunctions.net/api/test',finca, this.httpOptions);
+   putSala(id,sala){
+    return this.http.put('https://us-central1-klok-reservas.cloudfunctions.net/api/sala/'+id,sala, this.httpOptions);
   }
 }

@@ -2,11 +2,11 @@
   <h1>Mis espacios</h1>
   <button class="add">+</button>
 <ul>
-<li *ngFor="let sala of finca.Salas" [class.inactivo]="!sala.Activa">
+<li *ngFor="let sala of finca.Salas; let i = index" [class.inactivo]="!sala.Activa">
   <label class="switch">
             
-  <input *ngIf="sala.Activa" checked type="checkbox" (click)="cambioEstado($event)">
-  <input *ngIf="!sala.Activa" type="checkbox" (click)="cambioEstado($event)">
+  <input *ngIf="sala.Activa" [attr.id]="i" checked type="checkbox" (click)="cambioEstado($event)">
+  <input *ngIf="!sala.Activa" [attr.id]="i" type="checkbox" (click)="cambioEstado($event)">
 
   
   <span class="slider round"></span>

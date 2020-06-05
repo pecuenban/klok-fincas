@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ConexionesService } from '../conexiones.service';
-import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-espacios',
@@ -13,8 +12,6 @@ export class EspaciosComponent implements OnInit {
   
   constructor(protected conexionesService: ConexionesService) { }
 
- faPen = faPen; 
- faTrash = faTrash;
     ngOnInit() {
      this.conexionesService.getFinca('RYz6AHItbzMHLLJA3id7')
     .subscribe(
@@ -29,17 +26,23 @@ export class EspaciosComponent implements OnInit {
   }
   cambioEstado(elemento) {
     console.log(elemento.target);
-    /*this.userService.estadoUsuario().subscribe(
+    var sala = {
+      "id":elemento.target.id,
+      "Activa":elemento.target.checked
+    }
+    this.conexionesService.putSala('RYz6AHItbzMHLLJA3id7',sala).subscribe(
       data => {
+        console.log(data);
+        this.finca = data;/*
         if (data.success == -1) {
           elemento.target.checked = false;
         } else {
           elemento.target.checked = true;
-        }
+        }*/
       },
       error => {
         console.error(error);
       }
-    );*/
+    );
   }
 }

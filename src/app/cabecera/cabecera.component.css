@@ -6,3 +6,20 @@
 .logo img {
     width: 70px;
 }
+
+.menu {
+    width: 25px;
+    height: 25px;
+}
+.logo {
+    width: calc(100% - 50px);
+}
+.atras {
+    width: 25px;
+    height: 25px;
+    background: white;
+}
+.cabecera * {
+    text-align: center;
+    display: inline-block;
+}

@@ -6,8 +6,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
 
 import { AppComponent } from './app.component';
 import { ConexionesService } from './conexiones.service';
@@ -17,7 +15,7 @@ import { EspacioComponent } from './espacio/espacio.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,HttpClientModule,ReactiveFormsModule,FontAwesomeModule,
+  imports:      [ BrowserModule, FormsModule,HttpClientModule,ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: FincasComponent },
       { path: 'espacios', component: EspaciosComponent },

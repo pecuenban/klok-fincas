@@ -9,6 +9,9 @@
     margin: 15px;
     color: white;
 }
+b{
+    color: white;
+    }
 .add_espacio:before {
     content: '';
     position: absolute;
@@ -36,6 +39,8 @@
 }
 .add_espacio span{
   position: relative;
+  color: var(--color);
+
 }
 .centrado {
     position: absolute;
