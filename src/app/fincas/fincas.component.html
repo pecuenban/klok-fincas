@@ -1,10 +1,20 @@
 <div>
+  <h1>Mis espacios</h1>
+  <button class="add">+</button>
 <h2>{{finca.Nombre}}</h2>
 {{finca.Direccion}}
 <i>{{finca.Plan}}</i>
 <ul>
 <li *ngFor="let sala of finca.Salas" [class.inactivo]="!sala.Activa">
-  <b>{{sala.Nombre}}</b> de {{sala.HoraIni}} a {{sala.HoraFin}} aforo {{sala.Capacidad}}
+  <label class="switch">
+            
+  <input *ngIf="sala.Activa" checked type="checkbox" (click)="cambioEstado($event)">
+  <input *ngIf="!sala.Activa" type="checkbox" (click)="cambioEstado($event)">
+
+  
+  <span class="slider round"></span>
+</label>
+<b>{{sala.Nombre}}</b> de {{sala.HoraIni}} a {{sala.HoraFin}} aforo {{sala.Capacidad}}
 </li>
 </ul>
 </div>

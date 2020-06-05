@@ -25,5 +25,20 @@ export class FincasComponent implements OnInit {
       }
     );
   }
+  cambioEstado(elemento) {
+    console.log(elemento.target);
+    /*this.userService.estadoUsuario().subscribe(
+      data => {
+        if (data.success == -1) {
+          elemento.target.checked = false;
+        } else {
+          elemento.target.checked = true;
+        }
+      },
+      error => {
+        console.error(error);
+      }
+    );*/
+  }
 }
 
