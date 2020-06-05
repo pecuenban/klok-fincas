@@ -14,16 +14,7 @@ export class FincasComponent implements OnInit {
 
  
     ngOnInit() {
-     this.conexionesService.getFinca('RYz6AHItbzMHLLJA3id7')
-    .subscribe(
-      (data) => { // Success
-        this.finca = data;
-        console.log(data)
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+  
   }
   cambioEstado(elemento) {
     console.log(elemento.target);

@@ -1,9 +1,6 @@
-<div class="contenedor">
+<app-cabecera></app-cabecera><div class="contenedor">
   <h1>Mis espacios</h1>
   <button class="add">+</button>
-<h2>{{finca.Nombre}}</h2>
-{{finca.Direccion}}
-<i>{{finca.Plan}}</i>
 <ul>
 <li *ngFor="let sala of finca.Salas" [class.inactivo]="!sala.Activa">
   <label class="switch">
@@ -16,8 +13,6 @@
 </label>
 <span class="nombre">{{sala.Nombre}}</span>
 <div class="acciones">
-  <fa-icon [icon]="faPen"></fa-icon>
-  <fa-icon [icon]="faTrash"></fa-icon>
 
 </div>
 </li>

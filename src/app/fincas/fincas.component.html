@@ -1,20 +1,11 @@
-<div>
-  <h1>Mis espacios</h1>
-  <button class="add">+</button>
-<h2>{{finca.Nombre}}</h2>
-{{finca.Direccion}}
-<i>{{finca.Plan}}</i>
-<ul>
-<li *ngFor="let sala of finca.Salas" [class.inactivo]="!sala.Activa">
-  <label class="switch">
-            
-  <input *ngIf="sala.Activa" checked type="checkbox" (click)="cambioEstado($event)">
-  <input *ngIf="!sala.Activa" type="checkbox" (click)="cambioEstado($event)">
-
-  
-  <span class="slider round"></span>
-</label>
-<b>{{sala.Nombre}}</b> de {{sala.HoraIni}} a {{sala.HoraFin}} aforo {{sala.Capacidad}}
-</li>
-</ul>
+<div class="cuerpo">
+  <div class="cabecera">¡Bienvenido a <b>Klok</b>!</div><div class="contenedor">
+    
+    <p class="info">Panel de control del administrador</p>
+    <div class="centrado">
+      <div class="boton" [routerLink]="['/espacios']">Gestionar espacios</div>
+      <div class="boton">Atención al cliente</div>
+    </div>
+</div>
+<div class="add_espacio"><span>Añadir nuevo espacio</span></div>
 </div>
