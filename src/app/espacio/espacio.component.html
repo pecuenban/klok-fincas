@@ -1,0 +1,12 @@
+<div class="cuerpo"><span [routerLink]="['/espacios']" class="atras"></span><span class="titulo">Editar espacio</span>
+<div class="tarjeta">
+<span><b>Nombre:</b> {{sala.Nombre}}</span>
+<span><b>Aforo máximo:</b> {{sala.Capacidad}}</span>
+<span><b>Tiempo de reserva:</b> {{sala.Tiempo/2}}h</span>
+<span><b>Horario de apertura:</b></span>
+<div>Mañanas: De {{sala.HoraIni}} a {{sala.HoraFin}}</div>
+<div>Tardes: De {{sala.HoraIni2}} a {{sala.HoraFin2}}</div>
+
+<button>Guardar</button>
+</div>
+</div>

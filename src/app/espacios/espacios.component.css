@@ -14,6 +14,9 @@ li {
     padding: 15px 0px;
     border-bottom: solid 1px #cccccc;
 }
+li > *{
+  vertical-align: middle;
+}
 .contenedor {
     position: relative;
     margin: 15px;
