@@ -15,6 +15,7 @@ import { EspaciosComponent } from './espacios/espacios.component';
 import { EspacioComponent } from './espacio/espacio.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { AutenticarComponent } from './autenticar/autenticar.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,HttpClientModule,ReactiveFormsModule,MatIconModule,
@@ -24,9 +25,10 @@ import { AutenticarComponent } from './autenticar/autenticar.component';
       { path: 'espacios', component: EspaciosComponent },
       { path: 'new_espacio', component: EspacioComponent },
       { path: 'edit_espacio/:id', component: EspacioComponent },
+      { path: 'contacto', component: ContactoComponent },
       
     ])],
-  declarations: [ AppComponent, FincasComponent, EspaciosComponent, EspacioComponent, CabeceraComponent, AutenticarComponent ],
+  declarations: [ AppComponent, FincasComponent, EspaciosComponent, EspacioComponent, CabeceraComponent, AutenticarComponent, ContactoComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ConexionesService]
 })
