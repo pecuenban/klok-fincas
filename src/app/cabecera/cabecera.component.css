@@ -8,18 +8,27 @@
 }
 
 .menu {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 .logo {
-    width: calc(100% - 50px);
+    width: calc(100% - 70px);
 }
 .atras {
-    width: 25px;
-    height: 25px;
-    background: white;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border: solid 1px;
+    border-radius: 50%;
+}
+.atras i {
+    line-height: 30px;
+    color: white;
+    font-weight: 100;
+    font-size: 12pt;
 }
 .cabecera * {
     text-align: center;
     display: inline-block;
+    vertical-align: -webkit-baseline-middle;
 }
