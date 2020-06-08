@@ -13,17 +13,19 @@ import { FincasComponent } from './fincas/fincas.component';
 import { EspaciosComponent } from './espacios/espacios.component';
 import { EspacioComponent } from './espacio/espacio.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
+import { AutenticarComponent } from './autenticar/autenticar.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,HttpClientModule,ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: FincasComponent },
+      { path: '', component: AutenticarComponent },
+      { path: 'inicio', component: FincasComponent },
       { path: 'espacios', component: EspaciosComponent },
       { path: 'new_espacio', component: EspacioComponent },
       { path: 'edit_espacio/:id', component: EspacioComponent },
       
     ])],
-  declarations: [ AppComponent, FincasComponent, EspaciosComponent, EspacioComponent, CabeceraComponent ],
+  declarations: [ AppComponent, FincasComponent, EspaciosComponent, EspacioComponent, CabeceraComponent, AutenticarComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ConexionesService]
 })

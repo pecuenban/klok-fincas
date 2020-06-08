@@ -1,6 +1,6 @@
 <app-cabecera></app-cabecera><div class="contenedor">
   <h1>Mis espacios</h1>
-  <button class="add">+</button>
+  <button class="add" [routerLink]="['/new_espacio']">+</button>
 <ul>
 <li *ngFor="let sala of finca.Salas; let i = index" [class.inactivo]="!sala.Activa">
   <label class="switch">

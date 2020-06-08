@@ -55,3 +55,14 @@ button {
   width: 25px;
   background: white;
 }
+input {
+    font-size: 12pt;
+    color: #4D4D4D;
+    border: none;
+    border-bottom: solid 1px #ccc;
+    width: 90px;
+    font-family: inherit;
+}
+input[type="time"] {
+    width: 80px;
+}

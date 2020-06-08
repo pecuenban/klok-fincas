@@ -13,6 +13,9 @@ export class ConexionesService {
     })
   };
 
+  addFinca(finca) {
+    localStorage.setItem("Finca", finca);
+  }
   getFinca(id){
     return this.http.get('https://us-central1-klok-reservas.cloudfunctions.net/api/finca/'+id, this.httpOptions);
   }
@@ -21,5 +24,8 @@ export class ConexionesService {
   }
    putSala(id,sala){
     return this.http.put('https://us-central1-klok-reservas.cloudfunctions.net/api/sala/'+id,sala, this.httpOptions);
+  }
+   autenticarAdmin(user){
+    return this.http.post('https://us-central1-klok-reservas.cloudfunctions.net/api/autenticar/admin',user, this.httpOptions);
   }
 }

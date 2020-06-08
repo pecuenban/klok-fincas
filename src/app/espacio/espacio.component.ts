@@ -8,27 +8,40 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./espacio.component.css']
 })
 export class EspacioComponent implements OnInit {
-sala;
+sala = {
+  "Nombre":"",
+"Capacidad":"",
+"Tiempo":0,
+"HoraIni":"",
+"HoraFin":"",
+"HoraIni2":"",
+"HoraFin2":"",
+};
+editar = false;
+finca;
   constructor(protected conexionesService: ConexionesService,
     private router: Router,
-    private route: ActivatedRoute,) { }
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
       this.route.paramMap.subscribe(params => {
-
-
- this.conexionesService.getFinca('RYz6AHItbzMHLLJA3id7')
+        
+        
+            if (params.get("id") != null) {
+this.editar = true;
+ this.conexionesService.getFinca(localStorage.getItem("Finca"))
     .subscribe(
       (data) => { // Success
-        this.sala = data
-        this.sala = this.sala.Salas[params.get("id")];
+        this.finca = data
+        this.sala = this.finca.Salas[params.get("id")];
+        this.sala.Tiempo = this.sala.Tiempo/2;
       },
       (error) => {
         console.error(error);
       }
     );
 
-        
+            }
 
         
     });

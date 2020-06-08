@@ -13,7 +13,7 @@ export class EspaciosComponent implements OnInit {
   constructor(protected conexionesService: ConexionesService) { }
 
     ngOnInit() {
-     this.conexionesService.getFinca('RYz6AHItbzMHLLJA3id7')
+     this.conexionesService.getFinca(localStorage.getItem("Finca"))
     .subscribe(
       (data) => { // Success
         this.finca = data;
@@ -30,7 +30,7 @@ export class EspaciosComponent implements OnInit {
       "id":elemento.target.id,
       "Activa":elemento.target.checked
     }
-    this.conexionesService.putSala('RYz6AHItbzMHLLJA3id7',sala).subscribe(
+    this.conexionesService.putSala(localStorage.getItem("Finca"),sala).subscribe(
       data => {
         console.log(data);
         this.finca = data;/*
