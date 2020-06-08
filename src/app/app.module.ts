@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 
 
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { ConexionesService } from './conexiones.service';
@@ -16,7 +17,7 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { AutenticarComponent } from './autenticar/autenticar.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,HttpClientModule,ReactiveFormsModule,
+  imports:      [ BrowserModule, FormsModule,HttpClientModule,ReactiveFormsModule,MatIconModule,
     RouterModule.forRoot([
       { path: '', component: AutenticarComponent },
       { path: 'inicio', component: FincasComponent },
