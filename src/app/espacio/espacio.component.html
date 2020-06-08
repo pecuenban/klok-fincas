@@ -2,13 +2,15 @@
   <ng-container *ngIf="editar">Editar</ng-container>
   <ng-container *ngIf="!editar">Nuevo</ng-container> espacio</span>
 <div class="tarjeta">
-<span><b>Nombre:</b> <input [(ngModel)]="sala.Nombre"></span>
-<span><b>Aforo máximo:</b> <input type="number" [(ngModel)]="sala.Capacidad" min="1"></span>
-<span><b>Tiempo de reserva:</b> <input type="number" [(ngModel)]="sala.Tiempo" step="0.5" min="0.5">h</span>
+<form [formGroup]="formularioSala" (ngSubmit)="onSubmit()">
+<span><b>Nombre:</b> <input formControlName="Nombre" [(ngModel)]="sala.Nombre"></span>
+<span><b>Aforo máximo:</b> <input formControlName="Capacidad" type="number" [(ngModel)]="sala.Capacidad" min="1"></span>
+<span><b>Tiempo de reserva:</b> <input formControlName="Tiempo" type="number" [(ngModel)]="sala.Tiempo" step="0.5" min="0.5">h</span>
 <span><b>Horario de apertura:</b></span>
-<div>Mañanas: De <input [(ngModel)]="sala.HoraIni" type="time"> a <input [(ngModel)]="sala.HoraFin" type="time"></div>
-<div>Tardes: De <input [(ngModel)]="sala.HoraIni2" type="time"> a <input [(ngModel)]="sala.HoraFin2" type="time"></div>
+<div>Mañanas: De <input formControlName="HoraIni" [(ngModel)]="sala.HoraIni" type="time"> a <input formControlName="HoraFin" [(ngModel)]="sala.HoraFin" type="time"></div>
+<div>Tardes: De <input formControlName="HoraIni2" [(ngModel)]="sala.HoraIni2" type="time"> a <input formControlName="HoraFin2" [(ngModel)]="sala.HoraFin2" type="time"></div>
 
 <button>Guardar</button>
+</form>
 </div>
 </div>
