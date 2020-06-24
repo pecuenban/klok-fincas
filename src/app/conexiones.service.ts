@@ -17,18 +17,18 @@ export class ConexionesService {
     localStorage.setItem("Finca", finca);
   }
   getFinca(id){
-    return this.http.get('https://us-central1-klok-reservas.cloudfunctions.net/api/finca/'+id, this.httpOptions);
+    return this.http.get('https://europe-west2-klok-reservas.cloudfunctions.net/api/finca/'+id, this.httpOptions);
   }
    postFinca(finca){
-    return this.http.post('https://us-central1-klok-reservas.cloudfunctions.net/api/finca',finca, this.httpOptions);
+    return this.http.post('https://europe-west2-klok-reservas.cloudfunctions.net/api/finca',finca, this.httpOptions);
   }
    putSala(id,sala){
-    return this.http.put('https://us-central1-klok-reservas.cloudfunctions.net/api/sala/'+id,sala, this.httpOptions);
+    return this.http.put('https://europe-west2-klok-reservas.cloudfunctions.net/api/sala/'+id,sala, this.httpOptions);
   }
    postSala(id,sala){
-    return this.http.post('https://us-central1-klok-reservas.cloudfunctions.net/api/sala/'+id,sala, this.httpOptions);
+    return this.http.post('https://europe-west2-klok-reservas.cloudfunctions.net/api/sala/'+id,sala, this.httpOptions);
   }
    autenticarAdmin(user){
-    return this.http.post('https://us-central1-klok-reservas.cloudfunctions.net/api/autenticar/admin',user, this.httpOptions);
+    return this.http.post('https://europe-west2-klok-reservas.cloudfunctions.net/api/autenticar/admin',user, this.httpOptions);
   }
 }
