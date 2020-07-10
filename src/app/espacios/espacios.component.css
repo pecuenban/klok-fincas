@@ -25,3 +25,34 @@ h1 {
     font-size: 18pt;
     margin-top: 25px;
 }
+span.icono {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    display: inline-block;
+    margin-right: 15px;
+}
+span.icono.i_0 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/6.png?alt=media);
+}
+span.icono.i_1 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/1.png?alt=media);
+}
+span.icono.i_2 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/2.png?alt=media);
+}
+span.icono.i_3 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/3.png?alt=media);
+}
+span.icono.i_4 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/4.png?alt=media);
+}
+span.icono.i_5 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/5.png?alt=media);
+}
+span.icono.i_6 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/6.png?alt=media);
+}

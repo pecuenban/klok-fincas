@@ -17,7 +17,8 @@ sala = {
 "HoraFin":"",
 "HoraIni2":"",
 "HoraFin2":"",
-"id":""
+"id":"",
+"Tipo":""
 };
 formularioSala = new FormGroup({
   Nombre : new FormControl('',Validators.required),
@@ -27,6 +28,7 @@ formularioSala = new FormGroup({
   HoraFin : new FormControl('',Validators.required),
   HoraIni2 : new FormControl(''),
   HoraFin2 : new FormControl(''),
+  Tipo : new FormControl(''),
 });
 editar = false;
 finca;

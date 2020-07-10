@@ -9,6 +9,17 @@
 <span><b>Horario de apertura:</b></span>
 <div>Mañanas: De <input formControlName="HoraIni" [(ngModel)]="sala.HoraIni" type="time"> a <input formControlName="HoraFin" [(ngModel)]="sala.HoraFin" type="time"></div>
 <div>Tardes: De <input formControlName="HoraIni2" [(ngModel)]="sala.HoraIni2" type="time"> a <input formControlName="HoraFin2" [(ngModel)]="sala.HoraFin2" type="time"></div>
+<span><b>Icono:</b>
+<div class="iconoSeleccion">
+<div class="icono"><label for="i_1"><span class="icon i_1"></span></label><input id="i_1" formControlName="Tipo" [(ngModel)]="sala.Tipo" [checked]="sala.Tipo == '1'" name="icono" value="1" type="radio"></div>
+<div class="icono"><label for="i_2"><span class="icon i_2"></span></label><input id="i_2" formControlName="Tipo" [(ngModel)]="sala.Tipo" [checked]="sala.Tipo == '2'" name="icono" value="2" type="radio"></div>
+<div class="icono"><label for="i_3"><span class="icon i_3"></span></label><input id="i_3" formControlName="Tipo" [(ngModel)]="sala.Tipo" [checked]="sala.Tipo == '3'" name="icono" value="3" type="radio"></div>
+<div class="icono"><label for="i_4"><span class="icon i_4"></span></label><input id="i_4" formControlName="Tipo" [(ngModel)]="sala.Tipo" [checked]="sala.Tipo == '4'" name="icono" value="4" type="radio"></div>
+<div class="icono"><label for="i_5"><span class="icon i_5"></span></label><input id="i_5" formControlName="Tipo" [(ngModel)]="sala.Tipo" [checked]="sala.Tipo == '5'" name="icono" value="5" type="radio"></div>
+<div class="icono"><label for="i_6"><span class="icon i_6"></span></label><input id="i_6" formControlName="Tipo" [(ngModel)]="sala.Tipo" [checked]="sala.Tipo == '6'" name="icono" value="6" type="radio"></div>
+</div>
+
+</span>
 
 <button><i class="material-icons">sd_card</i> Guardar</button>
 </form>

@@ -10,7 +10,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    top: 130px;
+    top: 100px;
     background: white;
     border-radius: 20px 20px 0px 0px;
     padding: 15px;
@@ -20,7 +20,8 @@
     line-height: 40pt;
     border-bottom: solid 1px;
 }
-.tarjeta span:nth-child(4) {
+.tarjeta span:nth-child(4),
+.tarjeta span:nth-child(5) {
     border-bottom: none;
 }
 button i {
@@ -79,4 +80,52 @@ input {
 }
 input[type="time"] {
     width: 80px;
+}
+
+
+span.icon {
+    position: relative;
+    width: 25px;
+    height: 30px;
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    display: inline-block;
+    margin-bottom: 10px!important;
+}
+span.icon.i_0 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/6.png?alt=media);
+}
+span.icon.i_1 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/1.png?alt=media);
+}
+span.icon.i_2 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/2.png?alt=media);
+}
+span.icon.i_3 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/3.png?alt=media);
+}
+span.icon.i_4 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/4.png?alt=media);
+}
+span.icon.i_5 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/5.png?alt=media);
+}
+span.icon.i_6 {
+    background: url(https://firebasestorage.googleapis.com/v0/b/klok-reservas.appspot.com/o/6.png?alt=media);
+}
+
+.icono * {
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: auto!important;
+}
+.icono span.icon {
+    border-bottom: none;
+}
+.icono {
+    display: inline-block;
+    width: calc(100% / 6);
+    text-align: center;
 }

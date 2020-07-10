@@ -11,7 +11,7 @@
   
   <span class="slider round"></span>
 </label>
-<span class="nombre" [routerLink]="['/edit_espacio/'+i]">{{sala.Nombre}}</span>
+<span [className]="'icono i_' + sala.Tipo"></span><span class="nombre" [routerLink]="['/edit_espacio/'+i]">{{sala.Nombre}}</span>
 <div class="acciones">
 
 </div>
